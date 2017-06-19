@@ -1,0 +1,96 @@
+body{
+    background: radial-gradient(ellipse farthest-corner at center top, #ffee75, #ff8930);
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+input[name=word]{
+  font-weight: 400;
+  text-align: left;
+  color:rgba(50,50,50,.8);;
+  border: solid transparent; 
+  width:20%;
+  cursor: pointer;
+  font-size:1em;
+  border-radius:1px;
+}
+
+.resultscontainer{
+  display:flex;
+  flex-wrap:wrap;
+  font-size : 1.2em;
+  margin:10vh 10vh auto 10vh;
+}
+
+
+.searchcontainer{
+    margin:40vh;  
+    text-align:center;
+}
+
+.searchcontainer h1{
+    margin:10vh;
+}
+
+.thumbnail{
+    height:40vh;
+    margin:15vh 6vw;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    border-radius:10px;
+    background-color: #ffffff;
+}
+
+
+li{
+    list-style: none;
+}
+
+
+.imagecard {
+  float: left;
+  padding: 0 0 0 25px;
+  position: relative;
+  width:60%;
+  height:40vh;
+  margin-top:-15vh;
+}
+
+.imagecard img{
+   box-shadow: 0 4px 6px rgba(0, 0, 0, .3); 
+   border-radius:10px;
+   height:95%;
+   width:85%;
+   transition:height,width 0.5s ease;
+}
+
+.imagecard img:hover{
+   box-shadow: 0 4px 6px rgba(0, 0, 0, .3); 
+   border-radius:10px;
+   height:100%;
+   width:90%;
+}
+
+.textinfo{
+  position: relative;
+  margin-left:10vw;
+  line-height: 3rem;
+}
+
+.song a{
+    margin:2vh auto auto 1vw;
+    font-size:1.7rem;
+    text-decoration: none;
+    transition:font-size 1.5s ease;
+}
+
+.song a:hover{
+    font-weight:bold;
+    font-size:2rem;
+}
+
+.playbtn{
+    margin-left:0.5vw;
+    margin-top:5vh;
+    font-size:2rem;
+}
+

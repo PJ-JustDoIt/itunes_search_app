@@ -1,0 +1,43 @@
+<!DOCTYPE html>     				
+<html>
+ <head>   
+	<title> AlbumApp </title> 
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/app_comments.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+                                                
+ </head>
+<body>
+    
+ <div class="row resultscontainer">
+  <% parsedData.results.forEach(function(album){ %>   <!--note the use of parsedData.Search => parsedData is the body object -->
+   <div class="col-lg-6 col-md-6 col-xs-12">
+    <div class="thumbnail">
+        <div class="imagecard">
+         <img src="<%=album.artworkUrl100%>">
+         <div class="song">
+          <a href="<%= album.previewUrl %> " >Track Preview <span class="glyphicon glyphicon-play-circle playbtn " aria-hidden="true"></span></span></a>
+         </div>
+        </div>
+
+        <div class="textinfo">
+          <div> 
+           <li> <span style="color:orange" >Track : </span> <%= album.trackName  %> </li>
+          </div>
+          <div> 
+           <li> <span style="color:orange" >Album : </span><%= album.collectionName  %> </li>
+          </div> 
+        </div>
+    </div>
+   </div> 
+  <% });  %>
+ </div>
+ 
+
+
+
+<a href ="/">Search Again </a>   <!-- Back button ! -->
+
+
+ </body>
+</html>
