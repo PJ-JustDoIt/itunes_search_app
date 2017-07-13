@@ -8,20 +8,20 @@ app.set("view engine", "ejs");
 
 app.use(express.static('public'));
 
-app.get("/",function(req,res){                      //when root is hit in url , the form appears to user . user inputs search word on form .
+app.get("/",function(req,res){                      
     res.render("search_comments");
 });
 
 
 app.get("/results",function(req,res){
- var searchword=req.query.word;                    // note how search word is extracted from the form input from user. Why is this not req.body.word ????
+ var searchword=req.query.word;                    
  var url='https://itunes.apple.com/search?term='+searchword+'&limit=10';
 
- request(url,function(error,response,body){        // corresponding api is called to get the album list
+ request(url,function(error,response,body){        
      if(!error && response.statusCode == 200){
-       var parsedData = JSON.parse(body);          // JSON.parse gives the body object 
+       var parsedData = JSON.parse(body);           
        // res.send(parsedData);
-       res.render("albumapp_comments",{parsedData:parsedData});   // the album list is rendered to the user by ejs 
+       res.render("albumapp_comments",{parsedData:parsedData});   
      };
  });
 });
